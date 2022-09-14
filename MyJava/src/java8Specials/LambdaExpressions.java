@@ -17,9 +17,7 @@ public class LambdaExpressions {
 		name2.add("Orange");
 		name2.add("Apple");
 		name2.add("Mulberry");
-		name2.add("Berry");
-
-	
+		name2.add("Berry");	
 	
 	name1.forEach ((n)-> {System.out.println(n);}); // just print the contents like a forloop
 	Collections.sort(name1,(s1,s2)->s1.compareTo(s2));
@@ -29,10 +27,8 @@ public class LambdaExpressions {
 	 Drawable d=new Drawable(){  public void draw(){System.out.println("Drawing "+width);}  d.draw();
      Drawable d2=()->{     System.out.println("Drawing "+width); }; d2.draw();
     */
- 
-	
-	 List<Product> list=new ArrayList<Product>();  
-     
+ 	
+	 List<Product> list=new ArrayList<Product>();      
      //Adding Products  
      list.add(new Product(1,"HP Laptop",25000f));  
      list.add(new Product(3,"Keyboard",300f));  

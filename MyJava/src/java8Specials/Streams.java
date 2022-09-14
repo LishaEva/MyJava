@@ -2,6 +2,7 @@ package java8Specials;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -24,6 +25,8 @@ public class Streams {
 		Multiplesof2();
 		printNumbers();
 		System.out.println(removeDuplicates("Hello this word is  is not repeated is again is !"));
+		countTheRepeat();
+		
 	}
 
 	public static void printNumbers() {
@@ -41,5 +44,18 @@ public class Streams {
 		// in the above statement limit is 20, which means 20 such results NOT TILL 20--
 		// 2,4,...40
 	}
-
+	
+ public static void countTheRepeat() {
+	 String input = "Remove the repeated words and duplicated words words in the given sentence remove and remove";
+	 Long total =Arrays.stream(input.split("\\s")).collect(Collectors.counting());
+	 Long unique = Arrays.stream(input.split("\\s")).distinct().collect(Collectors.counting());
+	 System.out.println("total words in teh given sentence:"+total); 
+	 System.out.println("total UNIQUE words in the  given sentence:"+unique);// gives the count of unique words
+	  
+ }
+	
+	 //Collections sort and Compare to without lambda expression
+	public static void sort(List list) {
+	 Collections.sort(list);
+	}
 }
